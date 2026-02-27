@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+<nav id="navbar">
+  <header>CSS Fundamentals</header>
+
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li><a class="nav-link" href="#CSS_Syntax">CSS Syntax</a></li>
+    <li><a class="nav-link" href="#Selectors">Selectors</a></li>
+    <li><a class="nav-link" href="#Box_Model">Box Model</a></li>
+    <li><a class="nav-link" href="#Flexbox">Flexbox</a></li>
+   <li> <a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+
+<section class="main-section" id="Introduction">
+  <header>Introduction</header>
+  <p>
+CSS stands for Cascading Style Sheets and it is used to control the visual
+appearance of web pages. With CSS, you can change colors, fonts, spacing,
+layouts, and many other visual aspects of a website.
+</p>
+
+<p>
+Without CSS, all web pages would look very plain and similar. CSS allows
+developers to create attractive and user-friendly interfaces while keeping
+content and design separate.
+</p>
+</section>
+
+<section class="main-section" id="CSS_Syntax">
+  <header>CSS Syntax</header>
+  <p>
+CSS rules are written using a selector and a declaration block. The selector
+chooses which HTML element will be styled, and the declaration block contains
+the style rules.
+</p>
+<h3>CSS Rule Structure</h3>
+
+<p>
+A CSS rule defines how an HTML element should be styled.
+The general structure looks like this:
+</p>
+
+<code>
+selector {
+  property: value;
+}
+</code>
+
+<ul>
+  <li>
+    <strong>Selector:</strong>
+    Specifies the HTML element you want to style (e.g. h1, .class-name, #id-name).
+  </li>
+
+  <li>
+    <strong>Declaration Block:</strong>
+    The part inside curly braces { } that contains style rules.
+  </li>
+
+  <li>
+    <strong>Property:</strong>
+    The visual feature you want to change (e.g. color, font-size, margin).
+  </li>
+
+  <li>
+    <strong>Value:</strong>
+    The value assigned to the property (e.g. red, 20px).
+  </li>
+</ul>
+
+<code>
+h1 {
+  color: red;
+  font-size: 32px;
+}
+</code>
+
+<p>
+In this example, h1 is the selector, color and font-size are properties,
+and red and 32px are values.
+</p>
+<h3>Important Rules</h3>
+
+<ul>
+  <li>
+    <strong>Curly Braces { }:</strong>
+    All style rules start with { and end with }.
+  </li>
+
+  <li>
+    <strong>Colon ( : ):</strong>
+    Used to separate a property and its value.
+  </li>
+
+  <li>
+    <strong>Uppercase / Lowercase:</strong>
+    CSS is generally not case-sensitive, but using lowercase letters is recommended.
+  </li>
+
+  <li>
+    <strong>Comments:</strong>
+    You can add notes inside your CSS using this format:
+  </li>
+</ul>
+
+<code>
+/* This is a comment */
+</code>
+<h3>Grouping and Multiple Selectors</h3>
+
+<p>
+If you want to apply the same styles to multiple elements, you can separate selectors with commas.
+</p>
+
+<code>
+h1, h2, p {
+  font-family: Arial;
+  color: darkgray;
+}
+</code>
+
+<p>
+This rule applies the same font and color to h1, h2, and p elements.
+</p>
+
+</section>
+
+<section class="main-section" id="Selectors">
+  <header>Selectors</header>
+ <p>
+Selectors are patterns used to select the elements you want to style. They
+tell the browser which HTML elements should receive the CSS rules.
+</p>
+<code>
+.box {
+  background-color: yellow;
+  padding: 10px;
+}
+</code>
+
+<p>
+This selector styles all elements that have the class "box".
+</p>
+<p>
+Different types of selectors allow you to target elements in different ways,
+such as by tag name, class name, or unique id.
+</p>
+  <ul>
+    <li>Element selector</li>
+
+    <li>Class selector</li>
+     <li>ID selector</li>
+  <li>Group selector</li>
+  <li>Universal selector</li>
+  </ul>
+  <h3>Element Selector</h3>
+
+<p>
+Element selector selects all elements with the given tag name.
+</p>
+
+<code>
+p {
+  color: blue;
+}
+</code>
+
+<p>
+This rule changes the color of all paragraph elements to blue.
+</p>
+<h3>Class Selector</h3>
+
+<p>
+Class selector selects elements with a specific class attribute.
+</p>
+
+<code>
+.box {
+  background-color: yellow;
+}
+</code>
+
+<p>
+This rule applies a yellow background to elements with class "box".
+</p>
+<h3>ID Selector</h3>
+
+<p>
+ID selector targets a single unique element.
+</p>
+
+<code>
+#title {
+  font-size: 32px;
+}
+</code>
+
+<p>
+This rule changes the font size of the element with id "title".
+</p>
+<h3>Group Selector</h3>
+
+<p>
+Group selector applies the same styles to multiple selectors.
+</p>
+
+<code>
+h1, h2, p {
+  color: green;
+}
+</code>
+
+<p>
+This rule makes all h1, h2, and p elements green.
+</p>
+<h3>Universal Selector</h3>
+
+<p>
+Universal selector targets all elements on the page.
+</p>
+
+<code>
+* {
+  margin: 0;
+  padding: 0;
+}
+</code>
+
+<p>
+This rule removes default margin and padding from all elements.
+</p>
+</section>
+
+<section class="main-section" id="Box_Model">
+  <header>Box Model</header>
+  <p>
+The CSS box model describes how every element on a page is represented as a
+rectangular box. It consists of content, padding, border, and margin.
+</p>
+<h3>Content</h3>
+
+<p>
+Content is the actual text or image inside the element.
+</p>
+
+<code>
+div {
+  width: 200px;
+}
+</code>
+
+<p>
+This sets the width of the content area to 200 pixels.
+</p>
+<p>
+Understanding the box model is essential for controlling spacing and layout.
+It helps you know why elements take up a certain amount of space.
+</p>
+<h3>Padding</h3>
+
+<p>
+Padding creates space inside the element, around the content.
+</p>
+
+<code>
+div {
+  padding: 20px;
+}
+</code>
+
+<p>
+This adds 20 pixels of space inside the element.
+</p>
+<h3>Border</h3>
+
+<p>
+Border surrounds the padding and content.
+</p>
+
+<code>
+div {
+  border: 2px solid black;
+}
+</code>
+
+<p>
+This adds a 2 pixel solid black border around the element.
+</p>
+<h3>Margin</h3>
+
+<p>
+Margin creates space outside the element.
+</p>
+
+<code>
+div {
+  margin: 10px;
+}
+</code>
+
+<p>
+This adds 10 pixels of space outside the element.
+</p>
+
+</section>
+
+<section class="main-section" id="Flexbox">
+  <header>Flexbox</header>
+  <p>
+Flexbox is a layout system designed to make it easier to arrange elements in
+rows or columns. It is especially useful for creating responsive layouts.
+</p>
+
+<p>
+Using Flexbox, you can align, space, and reorder items inside a container
+without using floats or complicated positioning.
+</p>
+<h3>Display Flex</h3>
+
+<p>
+Display flex makes an element a flex container.
+</p>
+<ul>
+  <li>
+    <strong>display: flex;</strong>
+    Turns an element into a flex container.
+  </li>
+
+  <li>
+    <strong>Flex container:</strong>
+    The parent element that uses display: flex.
+  </li>
+
+  <li>
+    <strong>Flex items:</strong>
+    All direct children inside a flex container.
+  </li>
+
+  <li>
+    <strong>Main axis:</strong>
+    The main direction items follow (row or column).
+  </li>
+
+  <li>
+    <strong>Cross axis:</strong>
+    The direction perpendicular to the main axis.
+  </li>
+</ul>
+<code>
+.container {
+  display: flex;
+}
+</code>
+
+<p>
+This turns the container into a flex layout.
+</p>
+<h3>Flex Direction</h3>
+
+<p>
+Flex direction controls the direction of items.
+</p>
+<ul>
+  <li>
+    <strong>row (default):</strong>
+    Items are placed horizontally.
+  </li>
+
+  <li>
+    <strong>column:</strong>
+    Items are placed vertically.
+  </li>
+
+  <li>
+    <strong>row-reverse:</strong>
+    Items are placed horizontally in reverse order.
+  </li>
+
+  <li>
+    <strong>column-reverse:</strong>
+    Items are placed vertically in reverse order.
+  </li>
+</ul>
+<code>
+.container {
+  display: flex;
+  flex-direction: row;
+}
+</code>
+
+<p>
+This places items in a horizontal row.
+</p>
+<h3>Justify Content</h3>
+
+<p>
+Justify content aligns items horizontally.
+</p>
+<ul>
+  <li>
+    <strong>flex-start (default):</strong>
+    Aligns items to the start of the container (usually left).
+  </li>
+
+  <li>
+    <strong>flex-end:</strong>
+    Aligns items to the end of the container (usually right).
+  </li>
+
+  <li>
+    <strong>center:</strong>
+    Centers items horizontally.
+  </li>
+
+  <li>
+    <strong>space-between:</strong>
+    Places first item at the start, last item at the end, and distributes space between items.
+  </li>
+
+  <li>
+    <strong>space-around:</strong>
+    Adds equal space around each item.
+  </li>
+
+  <li>
+    <strong>space-evenly:</strong>
+    Creates equal spacing between all items, including edges.
+  </li>
+</ul>
+<code>
+.container {
+  display: flex;
+  justify-content: center;
+}
+</code>
+
+<p>
+This centers items across the main axis.
+</p>
+<h3>Align Items</h3>
+
+<p>
+Align items aligns items vertically.
+</p>
+<ul>
+  <li>
+    <strong>flex-start:</strong>
+    Aligns items to the top of the container.
+  </li>
+
+  <li>
+    <strong>flex-end:</strong>
+    Aligns items to the bottom.
+  </li>
+
+  <li>
+    <strong>center:</strong>
+    Centers items vertically.
+  </li>
+
+  <li>
+    <strong>stretch (default):</strong>
+    Stretches items to fill container height.
+  </li>
+</ul>
+<code>
+.container {
+  display: flex;
+  align-items: center;
+}
+</code>
+
+<p>
+This centers items vertically.
+</p>
+</section>
+
+
+<section class="main-section" id="Reference">
+  <header>Reference</header>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" >
+    MDN Web Docs - CSS Basics
+  </a>
+</main>
+
+</body>
+</html>
