@@ -1,2 +1,2 @@
 # technical-documentation-page
-A tribute page created for the freeCodeCamp Responsive Web Design certification
+A technical documentation page with a navigation menu and responsive layout - freeCodeCamp Project
