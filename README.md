@@ -1,2 +1,2 @@
-# product-landing-page
-A functional product landing page showcasing responsive design principles - freeCodeCamp Project
+# technical-documentation-page
+A tribute page created for the freeCodeCamp Responsive Web Design certification
